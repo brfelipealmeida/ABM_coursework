@@ -343,13 +343,13 @@ to cross-the-street
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
-210
-10
-647
-448
+313
+43
+723
+454
 -1
 -1
-13.0
+12.2
 1
 10
 1
@@ -395,7 +395,7 @@ num-of-people
 num-of-people
 0
 1000
-408.0
+102.0
 1
 1
 NIL
@@ -410,7 +410,7 @@ time-to-crossing
 time-to-crossing
 400
 5000
-1425.0
+488.0
 1
 1
 NIL
@@ -425,7 +425,7 @@ speed-limit
 speed-limit
 30
 150
-81.0
+58.0
 1
 1
 NIL
