@@ -191,13 +191,12 @@ to draw-crossings
 
   ;create pairs of crossings on roads-up
   ask patches with [(meaning = "road-up" or meaning = "road-down" or meaning = "road-middle-v") and (pycor mod 22 = 8 or pycor mod 22 = 9)][
-     set pcolor white
-    ;sprout-crossings 1 [
-      ;set shape "person"
-     ;set pcolor white
-     ;set heading 0
-    ; set size 1
-    ;]
+    sprout-crossings 1 [
+      set shape "square"
+     set color white
+     set heading 0
+     set size 1
+    ]
   ]
 
   ;make a random position of crossings on roads-up
@@ -210,7 +209,7 @@ to draw-crossings
 
   ;create waitpoints for pedestrians
   ask crossings with [pxcor mod 40 = 38] [
-    set pcolor black + 1
+    set color black + 1
    ; set shape "square 2"
     set meaning "waitpoint2"
 
@@ -222,8 +221,8 @@ to draw-crossings
   ask patches with [(meaning = "road-left" or meaning = "road-right" or meaning = "road-middle-h") and (pxcor mod 40 = 18 or pxcor mod 40 = 19)][
     sprout-crossings 1 [
      ;set shape "person"
-     ;set heading 90
-    set pcolor white
+     set heading 90
+     set color white
       set size 1
     ]
   ]
@@ -241,7 +240,7 @@ to draw-crossings
     set heading 90
     set shape "person"
     set meaning "waitpoint2"
-    set pcolor violet
+    set color violet
     stamp die
   ]
 
@@ -320,7 +319,6 @@ end
 to cross-the-street
   if crossing-part = 1 [
     face min-one-of patches with [meaning = "waitpoint2"] in-radius 4 [abs([xcor] of myself - pxcor)]
-    ask patches in-cone 3 180 with [meaning = "crossing"] [set used used + 1]
     set crossing-part 2
   ]
   if crossing-part = 2 [
@@ -330,23 +328,18 @@ to cross-the-street
     if heading > 225 and heading < 315 [set heading 270]
   ]
   if meaning = "waitpoint2" and crossing-part = 2 [
-    rt 180
-    ask patches in-cone 3 180 with [meaning = "crossing"] [set used used - 1]
-    lt 180
-    ask patches in-cone 3 180 with [meaning = "crossing"] [set used used + 1]
+    ;rt 180
     set crossing-part 3
   ]
   if crossing-part = 3 and meaning = "waitpoint" [
-    rt 180
-    ask patches in-cone 3 180 with [meaning = "crossing"] [set used used - 1]
-    lt 180
+   ; rt 180
     set crossing-part 0
     set walk-time 0
   ]
-  if (meaning = "waitpoint" and crossing-part = 2) or (meaning = "waitpoint2" and crossing-part = 3) [
-    fd 0
-    set waiting? true
-  ]
+
+  fd speed / 200 ; Move forward regardless of traffic or cars
+  set waiting? false ; No longer waiting
+
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
@@ -394,15 +387,15 @@ NIL
 1
 
 SLIDER
-4
-131
-176
-164
+12
+154
+184
+187
 num-of-people
 num-of-people
 0
 1000
-64.0
+408.0
 1
 1
 NIL
@@ -424,10 +417,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-25
-248
-197
-281
+10
+229
+182
+262
 speed-limit
 speed-limit
 30
