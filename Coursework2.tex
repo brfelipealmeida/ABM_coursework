@@ -158,7 +158,7 @@ time-to-crossing       & Numeric                          & \begin{tabular}[c]{@
 
 \textbf{Scales}
 
-The model has not a specified scale. The size of the patches is not defined.
+The model has not a specified scale. 
 
 \subsection{Process overview and scheduling}
 
@@ -215,9 +215,39 @@ In the scenario presented, there are initially 75 people(0 to 1000 units). Cross
 
 \subsection{Submodels}
 
+The submodels were built based on the model ( XXXX) 
+
+\subsubsection{move-people}
+This procedure aims to move the person agents with the following rules:
+
+\begin{itemize}
+    \item Check if the Walk-time of a person is greater than or equal to the time-to-crossing
+    \item Check if the person is at the crossing point( crossing-part>=1)
+    \item Check if the agent is at a wait point, and then indicate the intention to cross.
+    \item  Make the person close to the nearest wait point and then request a 'walk procedure' to move the agent
+    \item  If walk-time is not sufficient for reaching the crossing, it calls the 'walk' procedure
+\end{itemize}
+
+\subsubsection{walk}
+This submodel is responsible for the basic walking behaviour:
+
+\begin{itemize}
+    \item It checks the patch in front of the person's current position
+    \item If the patch is a sidewalk or wait point, It checks if there is any other agent on that patch
+    \item If the patch is not a sidewalk or wait point, the agent randomly turns right or left 
+    \item At the end, it checks if the agent has reached a wait point and updates the attribute ( Waiting?)
+\end{itemize}
 
 
+\subsubsection{cross-the-street}
 
+This procedure is focused on the agent's behaviour when crossing the street:
+\begin{itemize}
+    \item If the crossing part is 1, the agent faces the next wait point2 with a specific radius and sets the crossing part to 2
+    \item If the crossing part is 2, the person adjusts its direction
+    \item the agent set the crossing part from 3 to 0, indicating the crossing is complete, and then the walk time is reset to 0
+    \item the agent moves forward by a fraction of their speed and then the waiting? Attribute change to false to indicate that it is no longer waiting.
+\end{itemize}
 
 \section{Brief Methodology }
 
