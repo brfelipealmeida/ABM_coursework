@@ -306,7 +306,7 @@ to cross-the-street
     set walk-time 0
   ]
 
-  fd speed / 200 ; Move forward regardless of traffic or cars
+  fd speed / 200 ; Move forward regardless of traffic
   set waiting? false ; No longer waiting
 
 end
