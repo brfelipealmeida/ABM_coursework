@@ -153,16 +153,15 @@ The model has not a specified scale. The size of the patches is not defined.
 
 \subsection{Process overview and scheduling}
 
-The model is developed to simulate pedestrians' flows trying to cross a street. Thus, the pedestrians are placed randomly on the sidewalk. Pedestrians can walk, wait, or cross the street based on walk time and the crossing part.
 
-Loop of movements:
+The model is developed to simulate pedestrians' movement when they cross the street. The pedestrians follow specific rules such as walking on the sidewalk, waiting at the wait point close to the pedestrian crossing and then crossing the streets. Thus, the micro-simulation progress each interaction in the main loop following this step, allowing for tracking the movement and control of the interaction through the number of pedestrians, time to crossing and speed. To summarize, the simulations occur in that sequence:
 
-
-Walking behaviour:
-
-Crossing the Street
-
-Simulation Time:
+1. Setup the environment
+2. Main loop
+3. Move pedestrians
+4. Walking rules
+5. Crossing the street
+6. Simulation track
 
 
 \subsection{Design concepts}
