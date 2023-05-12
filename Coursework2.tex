@@ -200,11 +200,17 @@ The model is developed to simulate pedestrians' movement when they cross the str
 
 \subsection{Initialization}
 
+The code starts with the agents' definitions ( breed [crossings crossing] and breed [person person], representing the road crossings and pedestrians. And then, Is defines the Patches variables and person variables as mentioned before. Thus, 'to setup' initialise the simulation environment, creating the street network, crossings, and sidewalks, and placing the pedestrians in the environment. First, in 'draw-roads', this procedure creates the crossroads setting the patches in grey colour in four directions( road-up, road-down, road-left and road-right). 
+
+Second, it created the sidewalks in 'draw-sidewalk', setting the patch colour in brown. After that is drawn the crossing on roads going up and down with a white square shape. The position is randomly positioned along the y-axis and x-axis. Besides that, it is implemented the wait points for pedestrians.
+
+Third, this procedure places people on the sidewalks according to the desired number of people ('number-of-people). The model selects a random sidewalk patch and distributes the turtles with random attributes( speed, size, walk time, shape).
+
+
+
 \subsection{Input data}
 
-
-num-of-people
-
+In the scenario presented, there are initially 75 people(0 to 1000 units). Crossing time ranges from 400 to 5000 units, with an initial value set at 1300 units. The speed limit for pedestrians is set between 30 and 150 units, with a default value of 50 units representing normal speed. The model's settings include a central location of origin, with a maximum x-coordinate and y-coordinate of 17 units each. The patch size is 10 units, and the font size for any displayed information is 10. The frame rate for visual updates is set at 30 frames per second.
 
 
 \subsection{Submodels}
@@ -216,21 +222,6 @@ num-of-people
 \section{Brief Methodology }
 
 The methodology of this analysis is to run an experiment through behaviour space to understand what is the relationship between the number of pedestrians, the speed limit of pedestrians and the time to cross-influence in the number of people that have to wait to cross a street. Thus, as an outcome, build parameters to define what is the priority aspects to consider in urban design focused on the street intersection.
-
-
-
-Limitations
-
-Adding the flow of cars, cyclists and traffic lights would be relevant.
-
-
-
-
-
-
-
-
-
 
 
 
