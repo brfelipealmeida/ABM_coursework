@@ -119,10 +119,31 @@ Third, travessy time is not proportional to the concentration of people
 \subsection{Entities, state variables, and scales}
 
 
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Variable name} & \textbf{Variable type and units} & \textbf{Meaning}                                                                                         \\ \midrule
+meaning                & String                           & Represents the role of the patch                                                                         \\ \midrule
+will-cross?            & Boolean                          & \begin{tabular}[c]{@{}l@{}}Indicates whether anybody is going \\ to cross the street\end{tabular}        \\ \midrule
+used                   & Numeric                          & \begin{tabular}[c]{@{}l@{}}How many  pedestrians are \\ using the crossing\end{tabular}                  \\ \midrule
+speed                  & Numeric                          & The current speed of a person                                                                            \\ \midrule
+walk-time              & Numeric                          & \begin{tabular}[c]{@{}l@{}}How long the person will walk \\ before crossing the road\end{tabular}        \\ \midrule
+crossing-part          & Numeric                          & Divides the crossing into parts                                                                          \\ \midrule
+waiting?               & Boolean                          & \begin{tabular}[c]{@{}l@{}}Indicates whether the pedestrian is \\ waiting to cross the road\end{tabular} \\ \midrule
+num-of-people          & Numeric                          & \begin{tabular}[c]{@{}l@{}}The desired number of people \\ in the simulation\end{tabular}                \\ \midrule
+time-to-crossing       & Numeric                          & \begin{tabular}[c]{@{}l@{}}Represents the time taken \\ to cross the road\end{tabular}                   \\ \bottomrule
+\end{tabular}
+\caption{State variables}
+\label{table: variables}
+\end{table}
 
 
 
 \subsection{Process overview and scheduling}
+
+
+
 
 \subsection{Design concepts}
 
@@ -131,6 +152,10 @@ Third, travessy time is not proportional to the concentration of people
 
 
 \subsection{Submodels}
+
+
+
+
 
 \section{Brief Methodology }
 
@@ -163,7 +188,7 @@ Adding the flow of cars, cyclists and traffic lights would be relevant.
 
 \vspace{5mm} %5mm vertical space
 
-To access GitHub Repository \href{https://github.com/brfelipealmeida/LondonTubeNetwork}{Link}
+To access GitHub Repository \href{https://github.com/brfelipealmeida/ABM_coursework}{Link}
 
 \end{document}
 %  -------------------------------------------------
