@@ -266,7 +266,7 @@ to walk
   ifelse [meaning] of patch-ahead 1 = "sidewalk" or [meaning] of patch-ahead 1 = "waitpoint" [
     ifelse any? other persons-on patch-ahead 1 [
       rt random 45
-      lt  random 45
+      lt random 45
       set walk-time walk-time + 1
     ]
     [fd speed / 200 set walk-time walk-time + 1]
@@ -279,7 +279,13 @@ to walk
     ]
     set walk-time walk-time + 1
   ]
+
+  ; Check if the person reached a waitpoint and update the waiting? attribute
+  if [meaning] of patch-here = "waitpoint" or [meaning] of patch-here = "waitpoint2" [
+    set waiting? true
+  ]
 end
+
 
 to cross-the-street
   if crossing-part = 1 [
@@ -358,7 +364,7 @@ num-of-people
 num-of-people
 0
 1000
-153.0
+76.0
 1
 1
 NIL
@@ -373,7 +379,7 @@ time-to-crossing
 time-to-crossing
 400
 5000
-2129.0
+1367.0
 1
 1
 NIL
@@ -388,7 +394,7 @@ speed-limit
 speed-limit
 30
 150
-99.0
+51.0
 1
 1
 NIL
