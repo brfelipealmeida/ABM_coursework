@@ -6,7 +6,7 @@ patches-own[
   meaning        ;;the role of the patch
   will-cross?    ;;is anybody going to cross this crossing?
   used           ;;tells how many pedestrians are using this crossing
-  traffic        ;;tells how many car will cross this crossing, if traffic > 0, it's dangerous for pedestrians
+ ; traffic        ;;tells how many car will cross this crossing, if traffic > 0, it's dangerous for pedestrians
 
 ]
 
@@ -176,7 +176,6 @@ to draw-crossings
   ;create waitpoints for pedestrians
   ask crossings with [pxcor mod 40 = 38] [
     set color black + 1
-   ; set shape "square 2"
     set meaning "waitpoint2"
 
     stamp die
@@ -300,7 +299,7 @@ to cross-the-street
     set walk-time 0
   ]
 
-  fd speed / 200 ; Move forward regardless of traffic or cars
+  fd speed / 200 ; Move forward regardless of traffic
   set waiting? false ; No longer waiting
 
 end
