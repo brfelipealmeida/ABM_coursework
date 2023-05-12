@@ -118,6 +118,13 @@ Third, travessy time is not proportional to the concentration of people
 
 \subsection{Entities, state variables, and scales}
 
+\textbf{Entities}
+
+The entities in the project are the pedestrians who are walking in random directions, aiming to cross the street to continue the walk. In that context, the model also has the street, the sidewalk and the building representing the built environment. Besides that, it also has a pedestrian crossing and a separation in the middle of the streets.
+
+
+\textbf{State variables}
+
 
 \begin{table}[h]
 \centering
@@ -138,11 +145,24 @@ time-to-crossing       & Numeric                          & \begin{tabular}[c]{@
 \label{table: variables}
 \end{table}
 
+\newpage
 
+\textbf{Scales}
+
+The model has not a specified scale. The size of the patches is not defined.
 
 \subsection{Process overview and scheduling}
 
+The model is developed to simulate pedestrians' flows trying to cross a street. Thus, the pedestrians are placed randomly on the sidewalk. Pedestrians can walk, wait, or cross the street based on walk time and the crossing part.
 
+Loop of movements:
+
+
+Walking behaviour:
+
+Crossing the Street
+
+Simulation Time:
 
 
 \subsection{Design concepts}
