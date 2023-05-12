@@ -308,11 +308,11 @@ end
 GRAPHICS-WINDOW
 313
 43
-723
-454
+671
+402
 -1
 -1
-12.2
+10.0
 1
 10
 1
@@ -322,10 +322,10 @@ GRAPHICS-WINDOW
 1
 1
 1
--16
-16
--16
-16
+-17
+17
+-17
+17
 0
 0
 1
@@ -358,7 +358,7 @@ num-of-people
 num-of-people
 0
 1000
-102.0
+153.0
 1
 1
 NIL
@@ -373,7 +373,7 @@ time-to-crossing
 time-to-crossing
 400
 5000
-488.0
+2129.0
 1
 1
 NIL
@@ -388,7 +388,7 @@ speed-limit
 speed-limit
 30
 150
-58.0
+99.0
 1
 1
 NIL
