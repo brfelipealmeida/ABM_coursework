@@ -83,9 +83,17 @@
 \usepackage{amsmath}
 \usepackage{csquotes}% Recommended
 
-\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+\usepackage[style=authoryear,open={(},close={)}]{biblatex}
+\addbibresource{References.bib}
 
-\addbibresource{references.bib}% Syntax for version >= 1.2
+%\usepackage{natbib}
+%\bibliographystyle{abbrvnat}
+%\hypersetup{citecolor=black}
+%\setcitestyle{authoryear,open={(},close={)}}
+
+
+%\addbibresource{References.bib}% Syntax for version >= 1.2
+
 
 
 % The natbib package allows book-type citations (e.g. (Saucer et al., 1993))
