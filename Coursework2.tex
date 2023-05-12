@@ -96,35 +96,29 @@
     {\LARGE\textbf{Coursework 2\\
     % Subtitle
     CASA0011 – Agent-Based Modelling\\}}
-SN21125032 | Word count:
+SN21125032 | Word count: 1070
 
 \vspace{5mm} %5mm vertical space
   
 \section{Research Question}
 
-
-What is the impact of pedestrian flows and concentration in urban design at a street intersection?
-
-What is the influence of the number of pedestrians, speed limit, and time to cross a street on the number of pedestrians waiting to cross?
-
-
-How the number of people waiting to cross a street can define the optimal space for sidewalks close to pedestrians crossing?
-
+\begin{enumerate}
+    \item  What is the influence of the number of pedestrians, speed limit, and time to cross on the number of pedestrians waiting to cross a street?
+    \item How can the number of people waiting to cross a street define the optimal space for sidewalks close to pedestrians crossing?
+\end{enumerate}
 
 \section{ODD Description}
 \subsection{Purpose and patterns}
 
-According to ..... This a serious problem related to the lack of street space for pedestrians, and how this affects the rate of injuries caused by car crashes. Models developed on Netlogo related to this field, such as 15min cities ( brief explanation), Town - Traffic and Crowd Simulation( brief explanation), Traffic grid( brief explanation) and Taxi Cabs( brief explanation) illustrate the potentials of micro-simulation related to this field.
-Therefore, this model aims to test if a micro-simulation of a street intersection using pedestrian flows in crossing a street can explain the relationship between sidewalk dimension and waiting time to cross the street. In this model, it is applied...... However, this model does not intend to simulate a realistic street intersection with all the agents. The aim is to intend pedestrian behaviour in the context of commute flows and their relationship with the available space for a given sidewalk.  
+This model serves as a simplified micro-simulation of a street intersection to investigate the connection between pedestrians' spatial concentration and their waiting time to cross the street. It does not aim to replicate a realistic street intersection with all its agents but focuses on understanding pedestrian behaviour within commuting flows and the available sidewalk space.
+The model explores three distinct patterns:
+\begin{itemize}
+    \item High concentration near pedestrian crossings
+    \item Alternating density in opposite sidewalk regions
+    \item Non-proportional crossing time
+\end{itemize}
 
-Thus, the aim is to .....
-
-The patterns, 
-
-First, a high concentration of people close by pedestrian crossing
-Second, alternation in the density of people in opposite regions of the intersection
-Third, travessy time is not proportional to the concentration of people
-
+By examining these patterns, the model aims to understand how pedestrian behaviour, commute flows, and sidewalk availability are interconnected.
 \subsection{Entities, state variables, and scales}
 
 \textbf{Entities}
@@ -177,26 +171,10 @@ The model is developed to simulate pedestrians' movement when they cross the str
 
 \subsubsection{Basic principles}
 
+This model is based on the concept of agent pedestrian modelling in order to understand how ABM can support the understanding of pedestrian behaviour in the urban environment(\cite{batty_agent-based_2001}). Thus, this analysis is based on studies related to the simulation of pedestrians at intersections and their relationship with traffic accidents(\cite{cohen_microscopic_2018}), and also in order to understand pedestrian flow in a broader context(\cite{chen_delineating_2021}). To build this model, methods presented in the Town-Traffic \& Crowd simulation model(\cite{lukas_netlogo_nodate}) were applied to test the interaction of different agents in traffic.
+
 \subsubsection{Emergence}
  Despite giving a range of rules for pedestrians' movements, the number of people waiting to cross the streets and the location of people flow is a consequence of the behaviour of agents in the given environment; the output of this micro-simulation depends on this interaction. 
- 
-\subsubsection{Adaptation}
-
-\subsubsection{Objectives}
-
-\subsubsection{Learning}
-
-\subsubsection{Prediction}
-
-\subsubsection{Sensing}
-
-\subsubsection{Interaction}
-
-\subsubsection{Stochasticity}
-
-\subsubsection{Collectives}
-
-\subsubsection{Observation}
 
 \subsection{Initialization}
 
@@ -249,19 +227,14 @@ This procedure is focused on the agent's behaviour when crossing the street:
     \item the agent moves forward by a fraction of their speed and then the waiting? Attribute change to false to indicate that it is no longer waiting.
 \end{itemize}
 
+\vspace{5mm} %5mm vertical space
+
 \section{Brief Methodology }
 
-The methodology of this analysis is to run an experiment through behaviour space to understand what is the relationship between the number of pedestrians, the speed limit of pedestrians and the time to cross-influence in the number of people that have to wait to cross a street. Thus, as an outcome, build parameters to define what is the priority aspects to consider in urban design focused on the street intersection.
-
-
-
-
-
-
+The methodology employed in this analysis involves conducting an experiment using behaviour space. The objective is to examine the relationship between three key factors: the number of pedestrians, the speed limit imposed on pedestrians, and the time required to cross the street. The aim is to determine how these factors influence the number of individuals waiting before crossing the street. By conducting this experiment and analyzing the outcomes, the analysis seeks to establish parameters defining the critical aspects to consider in urban design, particularly street intersections. 
 
 
 % -------------------  BIBLIOGRAPHY ---------------------
-\newpage
 \printbibliography[title = {References}]
 \addcontentsline{toc}{chapter}{References} % Adds References Section to Table of Contents
 
